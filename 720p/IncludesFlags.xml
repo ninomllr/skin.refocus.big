@@ -9,6 +9,11 @@
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
 			<visible>[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522)] + IsEmpty(ListItem.Property(ReleaseDate))</visible>
+			<control type="group">
+				<width>32</width>
+				<height>32</height>
+				<include>flags_Language</include>
+			</control>
 			<control type="image">
 				<width>128</width>
 				<height>32</height>
@@ -495,6 +500,13 @@
 				<aspectratio align="center">keep</aspectratio>
 			</control>
 			<control type="image">
+				<width>35</width>
+				<height>35</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/lang/de.png</texture>
+				<visible>1</visible>
+			</control>
+			<control type="image">
 				<width>96</width>
 				<height>64</height>
 				<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
@@ -554,4 +566,71 @@
 			<visible>stringcompare(Listitem.ChannelName,flags/networks/,.png)</visible>
 		</control>
 	</include>
+	<!--language-->
+	<include name="flags_Language">
+		<control type="image">
+			<width>35</width>
+			<height>35</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/lang/de.png</texture>
+			<visible> substring(listitem.AudioLanguage,deu) | substring(listitem.AudioLanguage,ger) | substring(listitem.Path,German) </visible>
+		</control>
+		<control type="image">
+			<width>35</width>
+			<height>35</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/lang/fr.png</texture>
+			<visible>substring(listitem.AudioLanguage,fra) | substring(listitem.Path,French) </visible>
+		</control>
+		<control type="image">
+			<width>35</width>
+			<height>35</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/lang/en.png</texture>
+			<visible>substring(listitem.AudioLanguage,eng) | substring(listitem.Path,English) </visible>
+		</control>
+		<control type="image">
+			<width>35</width>
+			<height>35</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/lang/es.png</texture>
+			<visible>substring(listitem.AudioLanguage,spa) | substring(listitem.Path,Spanish) </visible>
+		</control>
+		<control type="image">
+			<width>35</width>
+			<height>35</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/lang/jp.png</texture>
+			<visible>substring(listitem.AudioLanguage,jpn) | substring(listitem.Path,Japanese) </visible>
+		</control>
+		<control type="image">
+			<width>35</width>
+			<height>35</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/lang/nl.png</texture>
+			<visible>substring(listitem.AudioLanguage,dut) | substring(listitem.Path,Dutch) </visible>
+		</control>
+		<control type="image">
+			<width>35</width>
+			<height>35</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/lang/ch.png</texture>
+			<visible>substring(listitem.AudioLanguage,zho	) | substring(listitem.Path,Chinese) </visible>
+		</control>
+		<control type="image">
+			<width>35</width>
+			<height>35</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/lang/ko.png</texture>
+			<visible>substring(listitem.AudioLanguage,kor) | substring(listitem.Path,Korean) </visible>
+		</control>
+		<control type="image">
+			<width>35</width>
+			<height>35</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>flags/lang/th.png</texture>
+			<visible>substring(listitem.AudioLanguage,tha) | substring(listitem.Path,Thai) </visible>
+		</control>
+	</include>
+
 </includes>
